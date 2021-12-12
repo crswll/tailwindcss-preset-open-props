@@ -5,7 +5,6 @@
   "module": "dist/index.esm.js",
   "scripts": {
     "build": "node build.js",
-    "release": "np",
     "test": "jest"
   },
   "keywords": [
@@ -17,7 +16,7 @@
   "devDependencies": {
     "esbuild": "^0.14.2",
     "jest": "^27.4.4",
-    "np": "^7.6.0",
-    "open-props": "^1.0.12"
+    "open-props": "^1.0.12",
+    "prettier": "^2.5.1"
   }
 }

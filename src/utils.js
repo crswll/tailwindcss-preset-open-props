@@ -1,33 +1,33 @@
-const tokenToMetaLookup = require('./token-to-meta-lookup')
+const tokenToMetaLookup = require("./token-to-meta-lookup")
 
 const filterObject = (collection, callback) =>
-  Object
-    .entries(collection)
-    .reduce((acc, [key, value]) => {
-      return callback(value, key)
-        ? { ...acc, [key]: value }
-        : acc
-    }, {})
+  Object.entries(collection).reduce((acc, [key, value]) => {
+    return callback(value, key) ? { ...acc, [key]: value } : acc
+  }, {})
 
 const mapObjectValues = (collection, callback) =>
-  Object
-    .entries(collection)
-    .reduce((acc, [key, value]) => ({ ...acc, [key]: callback(value) }), {})
+  Object.entries(collection).reduce(
+    (acc, [key, value]) => ({ ...acc, [key]: callback(value) }),
+    {}
+  )
 
 const getMetaLookup = metaLookup => (tokenName, tokenValue) =>
   metaLookup.find(([, tester]) => tester(tokenName, tokenValue))
 
-function getTailwindTheme (openProps) {
+function getTailwindTheme(openProps) {
   const metaLookup = getMetaLookup(tokenToMetaLookup)
 
-  return Object.entries(openProps).reduce(function (twTheme, [openPropsTokenName, openPropsTokenValue]) {
+  return Object.entries(openProps).reduce(function (
+    twTheme,
+    [openPropsTokenName, openPropsTokenValue]
+  ) {
     const helpers = metaLookup(openPropsTokenName, openPropsTokenValue)
 
     if (!helpers) {
       return twTheme
     }
 
-    const [ twKey, _prefixLookup, tokenNameTransform ] = helpers
+    const [twKey, _prefixLookup, tokenNameTransform] = helpers
 
     if (!twTheme[twKey]) {
       twTheme[twKey] = {}
@@ -38,7 +38,8 @@ function getTailwindTheme (openProps) {
     twTheme[twKey][tokenName] = `var(${openPropsTokenName})`
 
     return twTheme
-  }, {})
+  },
+  {})
 }
 
 module.exports.getTailwindTheme = getTailwindTheme

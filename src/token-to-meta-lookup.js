@@ -1,72 +1,72 @@
 module.exports = [
   [
-    'fontSize',
-    tokenName => tokenName.startsWith('--font-size-'),
-    tokenName => tokenName.replace('--font-size-', ''),
+    "fontSize",
+    tokenName => tokenName.startsWith("--font-size-"),
+    tokenName => tokenName.replace("--font-size-", ""),
   ],
   [
-    'lineHeight',
-    tokenName => tokenName.startsWith('--font-lineheight-'),
-    tokenName => tokenName.replace('--font-lineheight-', '')
+    "lineHeight",
+    tokenName => tokenName.startsWith("--font-lineheight-"),
+    tokenName => tokenName.replace("--font-lineheight-", ""),
   ],
   [
-    'fontWeight',
-    tokenName => tokenName.startsWith('--font-weight-'),
-    tokenName => tokenName.replace('--font-weight-', '')
+    "fontWeight",
+    tokenName => tokenName.startsWith("--font-weight-"),
+    tokenName => tokenName.replace("--font-weight-", ""),
   ],
   [
-    'letterSpacing',
-    tokenName => tokenName.startsWith('--font-letterspacing-'),
-    tokenName => tokenName.replace('--font-letterspacing-', '')
+    "letterSpacing",
+    tokenName => tokenName.startsWith("--font-letterspacing-"),
+    tokenName => tokenName.replace("--font-letterspacing-", ""),
   ],
   [
-    'borderWidth',
-    tokenName => tokenName.startsWith('--border-size-'),
-    tokenName => tokenName.replace('--border-size-', '')
+    "borderWidth",
+    tokenName => tokenName.startsWith("--border-size-"),
+    tokenName => tokenName.replace("--border-size-", ""),
   ],
   [
-    'backgroundImage',
-    tokenName => tokenName.startsWith('--gradient-'),
-    tokenName => tokenName.replace('--gradient-', 'gradient-')
+    "backgroundImage",
+    tokenName => tokenName.startsWith("--gradient-"),
+    tokenName => tokenName.replace("--gradient-", "gradient-"),
   ],
   [
-    'zIndex',
-    tokenName => tokenName.startsWith('--layer-'),
-    tokenName => tokenName.replace('--layer-', '')
+    "zIndex",
+    tokenName => tokenName.startsWith("--layer-"),
+    tokenName => tokenName.replace("--layer-", ""),
   ],
   [
-    'borderRadius',
-    tokenName => tokenName.startsWith('--radius-'),
-    tokenName => tokenName.replace('--radius-', '')
+    "borderRadius",
+    tokenName => tokenName.startsWith("--radius-"),
+    tokenName => tokenName.replace("--radius-", ""),
   ],
   [
-    'aspectRatio',
-    tokenName => tokenName.startsWith('--ratio-'),
-    tokenName => tokenName.replace('--ratio-', '')
+    "aspectRatio",
+    tokenName => tokenName.startsWith("--ratio-"),
+    tokenName => tokenName.replace("--ratio-", ""),
   ],
   [
-    'spacing',
-    tokenName => tokenName.startsWith('--size-'),
-    tokenName => tokenName.replace('--size-', '')
+    "spacing",
+    tokenName => tokenName.startsWith("--size-"),
+    tokenName => tokenName.replace("--size-", ""),
   ],
   [
-    'opBoxShadow',
+    "opBoxShadow",
     tokenName => /^--shadow-\d+$/.test(tokenName),
-    tokenName => tokenName.replace('--shadow-', '')
+    tokenName => tokenName.replace("--shadow-", ""),
   ],
   [
-    'opBoxShadow',
+    "opBoxShadow",
     tokenName => /^--inner-shadow-\d+$/.test(tokenName),
-    tokenName => tokenName.replace('--inner-shadow-', 'inner-')
+    tokenName => tokenName.replace("--inner-shadow-", "inner-"),
   ],
   [
-    'fontFamily',
-    tokenName => tokenName.startsWith('--font-'),
-    tokenName => tokenName.replace('--font-', '')
+    "fontFamily",
+    tokenName => tokenName.startsWith("--font-"),
+    tokenName => tokenName.replace("--font-", ""),
   ],
   [
-    'colors',
+    "colors",
     (tokenName, tokenValue) => /^#(?:[0-9a-fA-F]{3}){1,2}$/.test(tokenValue),
-    tokenName => tokenName.slice(2)
+    tokenName => tokenName.slice(2),
   ],
 ]

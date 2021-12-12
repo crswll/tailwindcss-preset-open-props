@@ -1,0 +1,30 @@
+name: Tests
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  unitTests:
+    name: Unit Tests
+    runs-on: [self-hosted, zendesk-stable]
+    steps:
+      - name: Checkout
+        uses: zendesk/checkout@v2
+      - name: Setup Node
+        uses: zendesk/setup-node@v2
+        with:
+          node-version: 14
+      - run: npm install
+      - run: npm run test
+  lint:
+    name: Linting
+    runs-on: [self-hosted, zendesk-stable]
+    steps:
+      - name: Checkout
+        uses: zendesk/checkout@v2
+      - name: Setup Node
+        uses: zendesk/setup-node@v2
+        with:
+          node-version: 14
+      - run: npm install
+      - run: npm run lint
