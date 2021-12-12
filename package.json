@@ -1,0 +1,23 @@
+{
+  "name": "tailwindcss-preset-open-props",
+  "version": "0.0.1",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "build": "node build.js",
+    "release": "np",
+    "test": "jest"
+  },
+  "keywords": [
+    "open-props",
+    "tailwindcss",
+    "preset"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.14.2",
+    "jest": "^27.4.4",
+    "np": "^7.6.0",
+    "open-props": "^1.0.12"
+  }
+}
