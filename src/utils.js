@@ -2,7 +2,7 @@ const tokenToMetaLookup = require("./token-to-meta-lookup")
 
 const filterObject = (collection, callback) =>
   Object.entries(collection).reduce((acc, [key, value]) => {
-    return callback(value, key) ? { ...acc, [key]: value } : acc
+    return callback(key, value) ? { ...acc, [key]: value } : acc
   }, {})
 
 const mapObjectValues = (collection, callback) =>
