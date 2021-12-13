@@ -50,16 +50,6 @@ module.exports = [
     tokenName => tokenName.replace("--size-", ""),
   ],
   [
-    "opBoxShadow",
-    tokenName => /^--shadow-\d+$/.test(tokenName),
-    tokenName => tokenName.replace("--shadow-", ""),
-  ],
-  [
-    "opBoxShadow",
-    tokenName => /^--inner-shadow-\d+$/.test(tokenName),
-    tokenName => tokenName.replace("--inner-shadow-", "inner-"),
-  ],
-  [
     "fontFamily",
     tokenName => tokenName.startsWith("--font-"),
     tokenName => tokenName.replace("--font-", ""),

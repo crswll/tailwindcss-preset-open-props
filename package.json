@@ -14,6 +14,7 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "color": "^4.1.0",
     "esbuild": "^0.14.2",
     "jest": "^27.4.4",
     "open-props": "^1.0.12",
