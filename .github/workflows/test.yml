@@ -16,9 +16,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16
-      - name: Install Dependencies
         run: yarn
-      - name: Build
         run: yarn build
-      - name: Test
         run: yarn test
