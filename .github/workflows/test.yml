@@ -18,5 +18,7 @@ jobs:
           node-version: 16
       - name: Test
         run: yarn
+      - name: Build
         run: yarn build
+      - name: Test
         run: yarn test
