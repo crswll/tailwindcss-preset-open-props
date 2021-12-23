@@ -11,7 +11,7 @@ const mapObjectValues = (collection, callback) =>
     {}
   )
 
-const getMetaLookup = metaLookup => (tokenName, tokenValue) =>
+const getMetaLookup = (metaLookup) => (tokenName, tokenValue) =>
   metaLookup.find(([, tester]) => tester(tokenName, tokenValue))
 
 function getTailwindTheme(openProps) {

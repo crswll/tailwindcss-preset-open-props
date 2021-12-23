@@ -7,7 +7,7 @@ function addCustomProps({ addBase }) {
 }
 
 function boxShadows({ addUtilities }) {
-  const shadows = filterObject(openProps, key =>
+  const shadows = filterObject(openProps, (key) =>
     /--(inner-)?shadow-\d+/.test(key)
   )
   const colors = filterObject(openProps, (_key, value) =>
@@ -18,7 +18,7 @@ function boxShadows({ addUtilities }) {
     80, 85, 90, 95, 100,
   ]
 
-  strengths.forEach(n => {
+  strengths.forEach((n) => {
     console.log(n)
     addUtilities({
       [`.shadow-strength-${n}`]: { "--shadow-strength": `${n}%` },

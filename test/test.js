@@ -3,7 +3,7 @@ const preset = require("../src")
 
 test("getMetaLookup", () => {
   const lookup = getMetaLookup([
-    ["test", s => s === "foo", s => s.toUpperCase() + "MEOW"],
+    ["test", (s) => s === "foo", (s) => s.toUpperCase() + "MEOW"],
   ])
 
   const [key, prefix, nameTransformer] = lookup("foo", 123)
@@ -29,7 +29,7 @@ describe("preset", () => {
       "zIndex",
       "fontFamily",
     ]
-    const keyCheck = keys.every(key => !!preset.theme[key])
+    const keyCheck = keys.every((key) => !!preset.theme[key])
 
     expect(keyCheck).toBe(true)
   })
