@@ -3,6 +3,8 @@ name: Publish
 on:
   release:
     types: [ published ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build:
@@ -13,7 +15,7 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: yarn install
+      - run: yarn install --frozen-lockfile
       - run: yarn test
       - run: yarn build
       - run: npm publish --access public --dry-run
