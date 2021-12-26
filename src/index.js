@@ -19,7 +19,6 @@ function boxShadows({ addUtilities }) {
   ]
 
   strengths.forEach((n) => {
-    console.log(n)
     addUtilities({
       [`.shadow-strength-${n}`]: { "--shadow-strength": `${n}%` },
     })
