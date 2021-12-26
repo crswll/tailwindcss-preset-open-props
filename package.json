@@ -5,6 +5,8 @@
   "module": "dist/index.esm.js",
   "scripts": {
     "build": "node build.js",
+    "lint": "prettier --check '{src,test}/**/*'",
+    "lint:write": "prettier --write '{src,test}/**/*'",
     "test": "jest"
   },
   "keywords": [
