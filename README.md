@@ -5,11 +5,11 @@ A [Tailwind CSS](https://tailwindcss.com/) preset that utilitizes [Open Props](h
 ## Installation
 
 ```bash
-npm install --save-dev @crswll/tailwindcss-preset-open-props
+npm install --save-dev tailwindcss-preset-open-props
 ```
 Then, in `tailwind.config.js`, add
 ```js
-const openPropsPreset = require('@crswll/tailwindcss-preset-open-props')
+const openPropsPreset = require('tailwindcss-preset-open-props')
 
 module.exports = {
   content: [
