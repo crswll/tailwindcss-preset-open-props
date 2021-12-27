@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   [
     "fontSize",
     (tokenName) => tokenName.startsWith("--font-size-"),

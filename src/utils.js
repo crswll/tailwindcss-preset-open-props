@@ -1,4 +1,4 @@
-const tokenToMetaLookup = require("./token-to-meta-lookup")
+import tokenToMetaLookup from "./token-to-meta-lookup"
 
 const filterObject = (collection, callback) =>
   Object.entries(collection).reduce((acc, [key, value]) => {
@@ -42,7 +42,9 @@ function getTailwindTheme(openProps) {
   {})
 }
 
-module.exports.getTailwindTheme = getTailwindTheme
-module.exports.getMetaLookup = getMetaLookup
-module.exports.mapObjectValues = mapObjectValues
-module.exports.filterObject = filterObject
+export {
+  getTailwindTheme,
+  getMetaLookup,
+  mapObjectValues,
+  filterObject,
+}

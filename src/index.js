@@ -1,6 +1,6 @@
-const openProps = require("open-props")
-const color = require("color")
-const { getTailwindTheme, mapObjectValues, filterObject } = require("./utils")
+import openProps from "open-props"
+import color  from "color"
+import { getTailwindTheme, mapObjectValues, filterObject } from "./utils"
 
 function addCustomProps({ addBase }) {
   addBase({ ":root": mapObjectValues(openProps, String) })
@@ -41,7 +41,7 @@ function boxShadows({ addUtilities }) {
   })
 }
 
-module.exports = {
+export default {
   theme: {
     ...getTailwindTheme(openProps),
     extend: {
