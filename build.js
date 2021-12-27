@@ -3,10 +3,13 @@ const esbuild = require('esbuild')
 let makeAllPackagesExternalPlugin = {
   name: 'make-all-packages-external',
   setup(build) {
-    // Must not start with "/" or "./" or "../"
-    let filter = /^[^.\/]|^\.[^.\/]|^\.\.[^\/]/
-    build.onResolve({ filter }, args => ({ path: args.path, external: true }))
-  },
+    // Only do not want to inline color
+    let filter = /^color$/
+    build.onResolve({ filter }, args => ({
+      path: args.path,
+      external: true,
+    }))
+  }
 }
 
 const makeConfig = ({ format }) => ({
