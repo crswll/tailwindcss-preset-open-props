@@ -42,9 +42,4 @@ function getTailwindTheme(openProps) {
   {})
 }
 
-export {
-  getTailwindTheme,
-  getMetaLookup,
-  mapObjectValues,
-  filterObject,
-}
+export { getTailwindTheme, getMetaLookup, mapObjectValues, filterObject }

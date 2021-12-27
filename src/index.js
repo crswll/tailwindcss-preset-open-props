@@ -1,5 +1,5 @@
 import openProps from "open-props"
-import color  from "color"
+import color from "color"
 import { getTailwindTheme, mapObjectValues, filterObject } from "./utils"
 
 function addCustomProps({ addBase }) {
