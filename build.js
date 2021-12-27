@@ -4,7 +4,7 @@ const makeConfig = ({ format }) => ({
   entryPoints: ['src/index.js'],
   outfile: `dist/index.${format}.js`,
   format: format,
-  bundle: true,
+  bundle: false,
   platform: 'node',
 })
 

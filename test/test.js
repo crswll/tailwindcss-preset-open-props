@@ -1,5 +1,5 @@
-const { getMetaLookup } = require("../src/utils")
-const preset = require("../src")
+import { getMetaLookup } from "../src/utils"
+import preset from "../src"
 
 test("getMetaLookup", () => {
   const lookup = getMetaLookup([
