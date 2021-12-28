@@ -1,8 +1,15 @@
 {
   "name": "tailwindcss-preset-open-props",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "default": "./dist/index.cjs.js"
+    }
+  },
   "scripts": {
     "build": "node build.js",
     "lint": "prettier --check '{src,test}/**/*'",
