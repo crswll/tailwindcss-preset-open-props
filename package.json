@@ -1,15 +1,8 @@
 {
   "name": "tailwindcss-preset-open-props",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
-  "exports": {
-    ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js",
-      "default": "./dist/index.cjs.js"
-    }
-  },
   "scripts": {
     "build": "node build.js",
     "lint": "prettier --check '{src,test}/**/*'",
@@ -24,12 +17,13 @@
   "license": "MIT",
   "dependencies": {
     "color": "^4.1.0",
-    "open-props": "^1.0.12"
+    "open-props": "^1.1.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
-    "babel-core": "^6.26.3",
-    "esbuild": "^0.14.8",
+    "babel-jest": "^27.4.5",
+    "esbuild": "^0.14.9",
     "jest": "^27.4.4",
     "prettier": "^2.5.1"
   }
