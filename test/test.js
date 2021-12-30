@@ -31,6 +31,6 @@ describe("preset", () => {
     ]
     const presetKeys = Object.keys(preset.theme)
 
-    keys.forEach(key => expect(presetKeys).toContain(key))
+    keys.forEach((key) => expect(presetKeys).toContain(key))
   })
 })
