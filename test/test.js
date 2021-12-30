@@ -29,8 +29,8 @@ describe("preset", () => {
       "zIndex",
       "fontFamily",
     ]
-    const keyCheck = keys.every((key) => !!preset.theme[key])
+    const presetKeys = Object.keys(preset.theme)
 
-    expect(keyCheck).toBe(true)
+    keys.forEach(key => expect(presetKeys).toContain(key))
   })
 })
